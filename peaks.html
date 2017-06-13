@@ -62,6 +62,7 @@
 	<div class="row">
 		<div class="col-lg-4">
 			<h2>Add New Segments</h2>
+			<p>Your new segment will begin at the current position of the audio track. You will be able to adjust the start/end time of the segment once the segment has been added to the waveform.</p>
 			<input class="form-control" type="text" placeholder="Enter a Segment Name" name="segment-name" id="segment-name">
 			<br>
 			<textarea class="form-control" placeholder="Enter your segment description here" name="segment-description" id="segment-description"></textarea>
@@ -74,7 +75,16 @@
 			</div>	
 		</div>
 		<div class="col-lg-8">
-			
+			<div id="segments-list">
+				<div class="list-group">
+				    <a class="list-group-item" v-for="segment in segments" v-on:click="seekToSegment(segment)">
+				      <h4>{{ segment.id }}</h4>
+				      <p>{{segment.startTime}} - {{segment.endTime}}</p>
+				      <p>{{segment.labelText}}</p>
+				    </a>
+				 </div>
+
+			</div>
 		</div>
 
 

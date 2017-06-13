@@ -49,6 +49,19 @@
   p.on('segments.ready', function(){
 
 
+    var segmentsList = new Vue({
+      el:'#segments-list', 
+      data: {
+        segments: p.segments.getSegments()
+      }, 
+      methods: {
+        seekToSegment: function(segment){
+          console.log(segment)
+          p.time.setCurrentTime(parseFloat(segment.startTime)); 
+        }
+      }
+    })
+
     //hook up custom audio controls to UI
     document.querySelector('#zoom-out-button').addEventListener('click', p.zoom.zoomOut)
     document.querySelector('#zoom-in-button').addEventListener('click', p.zoom.zoomIn)
@@ -111,13 +124,6 @@
 
     }); 
 
-
-
-
-
-    console.log(p.segments.getSegments())
-    console.log(p.segments.add({startTime: 120, endTime: 240})) 
-    console.log(p.segments.getSegments())
   
   })
 
