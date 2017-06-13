@@ -17,7 +17,12 @@
 <div class="container">
 	<div class="row">
 		<h1>Peaks JS Demo</h1>
-		<p>This example is using a data produced in JSON format to render the waveform. Trying to create an ArrayBuffer for binary data with the ~30 min audio file likely exceeded some memory limits for the browser when creating a waveform from AudioContext. </p>
+		<p>This example is using a data produced in JSON format to render the waveform. Trying to create an ArrayBuffer for binary data with the ~30 min audio file likely exceeded some memory limits for the browser when creating a waveform from AudioContext. There is a handy command line tool also available from the BBC: <a href="https://github.com/bbc/audiowaveform">audiowaveform</a></p>
+		<p>The <a href="https://github.com/bbc/peaks.js/blob/master/README.md">Peak.js</a> library from the BBC was used to create the visualization.</p>
+		<h2>Piano Sonata in B Minor (1854) by Franz Liszt</h2>
+		<p>The sonata unfolds in approximately 30 minutes of unbroken music. While its four distinct movements are rolled into one, the entire work is encompassed within the traditional Classical sonata scheme - exposition, development, and recapitulation. Liszt has effectively composed a sonata within a sonata, which is part of the work's uniqueness. Liszt was very economical with his thematic material, indeed, the very first page contains the three motivic ideas that provide the content, transformed throughout, for nearly all that follows.</p>
+		<p>The sonata has four movements although there is no gap between them. Superimposed upon the four movements is a large sonata form structure, although the precise beginnings and endings of the traditional development and recapitulation sections has long been a topic of debate.</p>
+		<cite><a href="https://en.wikipedia.org/wiki/Sonata_in_B_minor_(Liszt)">Wikipedia</a></cite>
 
 
 		<audio id="audio-element">
@@ -53,7 +58,7 @@
 	<br>
 	<div class="row">
 		<div class="col-lg-4">
-			<h2>Add New Segments</h2>
+			<h3>Add New Segments</h2>
 			<p>Your new segment will begin at the current position of the audio track. You will be able to adjust the start/end time of the segment once the segment has been added to the waveform.</p>
 			<input class="form-control" type="text" placeholder="Enter a Segment Name" name="segment-name" id="segment-name">
 			<br>
@@ -67,7 +72,7 @@
 			</div>	
 		</div>
 		<div class="col-lg-8" id="segments-list">
-			<h2>Existing Segments</h2>
+			<h3>Existing Segments</h2>
 			<p>Click on one of the segments from the list below to skip to the beginning of that segment.</p>
 			<div>
 				{{currentTime}}

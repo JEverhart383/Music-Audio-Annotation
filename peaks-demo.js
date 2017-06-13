@@ -32,7 +32,27 @@
   	}, 
     zoomLevels: [512, 1024, 2048, 4096], 
     segments: [
-
+        {
+          startTime: 1.3, 
+          endTime: 242, 
+          id: 'sotto voce', 
+          labelText: "The first theme is a descending scale marked sotto voce; full of ominous undertow, it reappears at crucial points in the work's structure. This leads immediately to a jagged, forceful theme in octaves. This is quickly followed by a hammering marcato idea in the left hand. A dialogue ensues, with mounting energy, until reaching the noble grandiose second subject in D major. Liszt transforms the left-hand theme into a lyrical melody of exquisite loveliness.", 
+          editable: false
+        }, 
+        {
+          startTime: 649, 
+          endTime: 1030, 
+          id: 'Andante sostenuto', 
+          labelText: "The slow movement, an Andante sostenuto of haunting beauty, is the centerpiece of the sonata.", 
+          editable: false
+        }, 
+        {
+          startTime: 1325, 
+          endTime: 1495, 
+          id: 'fugato', 
+          labelText: "The final recapitulatory section is launched by a driving fugato of contrapuntal skill which leads to the compressed return of the opening material. Calling upon every intellectual resource and fully exploiting the pianist's technical arsenal, it is at this point where a performer's concentration might flag. But this final section has only just begun, and a pianist needs to have reserved fuel in his tank if he is to turn in a successful performance of the sonata", 
+          editable: false
+        }
     ]
 
   });
