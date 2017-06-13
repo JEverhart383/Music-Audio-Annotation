@@ -74,9 +74,9 @@
 		<div class="col-lg-8" id="segments-list">
 			<h3>Existing Segments</h2>
 			<p>Click on one of the segments from the list below to skip to the beginning of that segment.</p>
-			<div>
-				{{currentTime}}
-			</div>
+			<h5>
+				Current Time: {{currentTime}} 
+			</h5>
 			<div>
 				<div class="list-group">
 				    <a v-bind:class="{active: (segment.startTime < currentTime && segment.endTime > currentTime), 'list-group-item': true }" v-for="segment in segments" v-on:click="seekToSegment(segment)">
@@ -95,8 +95,8 @@
 </div>
 
 
-<script src="./node_modules/peaks.js/peaks.js"></script>
-<script type="text/javascript" src="./node_modules/vue/dist/vue.js"></script>
+<script src="./peaks.js"></script>
+<script type="text/javascript" src="./vue.js"></script>
 <script src="./peaks-demo.js"></script>
 
 </body>
