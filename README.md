@@ -1,3 +1,3 @@
 # Music and Audio Annotation
 
-This project builds on other open source libraries to provide a way for people to annotate different types of audio. 
+This project builds on other open source libraries to provide a way for people to annotate different types of audio. This example uses Peaks.js and audiowaveform, both from the BBC, to process and display the resultant waveform data. Peaks.js provides handy methods to interact with and segment the waveform, which are then tied back into some Vue.js code to provide methods for adding segments and navigating active/inactive segments. 
