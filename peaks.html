@@ -19,22 +19,8 @@
 
 
 <script src="./node_modules/peaks.js/peaks.js"></script>
-<script>
-  
-(function(Peaks){
-  var myAudioContext = new AudioContext(); 
+<script src="./peaks-demo.js">
 
-  var p = Peaks.init({
-  	container: document.querySelector('#waveform-container'), 
-  	mediaElement: document.querySelector('#audio'), 
-  	// audioContext: myAudioContext
-  	dataUri: {
-  		// arrayBuffer: 'sonata.dat'
-  		json: 'sonata.json'
-  	}
-
-  });
-})(peaks)
 </script>
 
 </body>
