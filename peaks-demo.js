@@ -52,7 +52,8 @@
     var segmentsList = new Vue({
       el:'#segments-list', 
       data: {
-        segments: p.segments.getSegments()
+        segments: p.segments.getSegments(),
+        currentTime: 0
       }, 
       methods: {
         seekToSegment: function(segment){
@@ -60,6 +61,11 @@
           p.time.setCurrentTime(parseFloat(segment.startTime)); 
         }
       }
+    })
+
+    audiography.audioElement.addEventListener('timeupdate', function(){
+      console.log(p.time.getCurrentTime())
+      segmentsList.currentTime = p.time.getCurrentTime(); 
     })
 
     //hook up custom audio controls to UI
