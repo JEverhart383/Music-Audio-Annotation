@@ -17,19 +17,10 @@
       console.log('clicked')
       console.log(audiography.audioElement.duration)
       audiography.audioElement.currentTime = (audiography.audioElement.currentTime + (audiography.audioElement.duration / 10))
+      console.log(audiography.audioElement.currentTime); 
     }, 
-    seekAudioForward: function(){
+    seekAudioBackward: function(){
       audiography.audioElement.currentTime = (audiography.audioElement.currentTime - (audiography.audioElement.duration / 10))
-    }, 
-    addSegmentToWaveform: function(segmentID, segmentDescription){
-
-      //this method will add the segment to the waveform with 
-      //edit = true
-
-    }, 
-    saveSegmentToWaveform: function(segmentID){
-      //this method will take the segmentID and update the startTime, endTime, and 
-      //push all changes to the backend
     }
   }
 
@@ -63,8 +54,10 @@
       }
     })
 
+
+    //This listener keeps track of the current time in the Vue VM 
+    //so that we can display active segments as they become active
     audiography.audioElement.addEventListener('timeupdate', function(){
-      console.log(p.time.getCurrentTime())
       segmentsList.currentTime = p.time.getCurrentTime(); 
     })
 
