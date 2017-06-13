@@ -14,6 +14,10 @@ audio.addEventListener('play', function(event){
 
 })
 
+audio.addEventListener('timeupdate', function(){
+	console.log('playing' + this.currentTime); 
+})
+
 var button = document.querySelector('#annotation-button'); 
 
 button.addEventListener('click', function(){

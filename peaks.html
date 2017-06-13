@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Peaks JS Demo</title>
+</head>
+<body>
+<h1>Peaks JS Demo</h1>
+
+
+<audio id="audio" controls="controls">
+<source src="Sonatasimin.mp3">
+</source>
+</audio>
+	
+</audio>
+<div id="waveform-container">
+	
+</div>
+
+
+<script src="./node_modules/peaks.js/peaks.js"></script>
+<script>
+  
+(function(Peaks){
+  var myAudioContext = new AudioContext(); 
+
+  var p = Peaks.init({
+  	container: document.querySelector('#waveform-container'), 
+  	mediaElement: document.querySelector('#audio'), 
+  	// audioContext: myAudioContext
+  	dataUri: {
+  		// arrayBuffer: 'sonata.dat'
+  		json: 'sonata.json'
+  	}
+
+  });
+})(peaks)
+</script>
+
+</body>
+</html>
