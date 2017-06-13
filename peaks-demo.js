@@ -10,25 +10,21 @@
   		// arrayBuffer: 'sonata.dat'
   		json: 'sonata.json'
   	}, 
-    zoomLevels: [512, 1024, 2048, 4096],
+    zoomLevels: [512, 1024, 2048, 4096], 
     segments: [
-      {
-        startTime: 120, 
-        endTime: 140, 
-        editable: false, 
-        color: '#ff0000', 
-        labelText: 'First Segment'
-      }, 
-      {
-        startTime: 220, 
-        endTime: 240, 
-        editable: false, 
-        color: '#ff0000', 
-        labelText: 'Second Segment'
-      }, 
-
 
     ]
 
   });
+
+  p.on('segments.ready', function(){
+
+
+    console.log(p.segments.getSegments())
+    console.log(p.segments.add({startTime: 120, endTime: 240})) 
+    console.log(p.segments.getSegments())
+  
+  })
+
+
 })(peaks)
